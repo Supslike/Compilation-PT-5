@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&family=Oswald:wght@200&family=Poppins:wght@200;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    scroll-behavior: smooth;
+}
+
+.nav1 {
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    animation: popdown 1s ease-in-out;
+}
+
+.nav2 {
+    display: none;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100%;
+    position: sticky;
+    z-index: 100;
+    animation: popdown 1s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: rgba(0, 0, 0, 0.3) 2px solid;
+    backdrop-filter: blur(10px);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@keyframes popdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+
+@font-face {
+    font-family: "Charu Chandan BloodDrip Unicode";
+    src: url("static/Charu_Chandan_BloodDrip_Unicode-Regular.eot?") format("eot"), url("static/Charu_Chandan_BloodDrip_Unicode-Regular.woff") format("woff"), url("static/Charu_Chandan_BloodDrip_Unicode-Regular.ttf") format("truetype"), url("static/Charu_Chandan_BloodDrip_Unicode-Regular.svg#CharuChandanBloodDripUnicode") format("svg");
+    font-weight: 100;
+    font-style: normal;
+}
+
+.logo-sec, .navigation-sec {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-sec img {
+    width: 110px;
+    height: auto;
+    margin-left: 1in;
+    transform: translateY(0px);
+}
+
+.navigation-sec {
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.link-nav:link, .link-nav:visited {
+    color: rgba(255, 255, 255, 0.575);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    transition: all 0.3s;
+}
+
+.link-nav:link:hover, .link-nav:visited:hover {
+    color: rgba(255, 255, 255, 0.744);
+    font-weight: bolder;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.744);
+    padding: 0px 10px;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 20%), linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 10%), url("static/bagan-1029303.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.backdrop-filter {
+    height: 100%;
+    width: 100%;
+    backdrop-filter: brightness(60%);
+    display: flex;
+    align-items: center;
+}
+
+.backdrop-filter h1 { 
+    font-family: 'Domine', serif;
+    color: white;
+    font-size: 0.9in;
+    width: 60%;
+    margin-left: 1.5in;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.backdrop-filter p { 
+    font-family: 'Poppins', sans-serif;
+    color: #D2CFCD;
+    font-size: 0.2in;
+    width: 75%;
+    margin-left: 2.5in;
+    padding-left: 0.5in;
+    border-left: #56241F solid 2px;
+    font-weight: lighter;
+
+}
+
+/* Reveal Animation */
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.right.reveal {
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.right.reveal.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.left.reveal {
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.left.reveal.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.highlight {
+    width: 100%;
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10vh;
+}
+
+.highlight .headline h2 {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.highlight .headline p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.highlight-container {
+    padding-top: 10vh;
+}
+
+.content-container {
+    width: 80%;
+    height: 100%;
+}
+
+.column-great {
+    display: flex;
+    justify-content: space-around;
+}
+
+.column-great:first-child {
+    margin-top: 1in;
+}
+
+.top-sec {
+    display: flex;
+    gap: 20px;
+}
+
+.top-sec p {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #27BFB4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.top-sec h2 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.work {
+    width: 50%;
+}
+
+.main-sec {
+    height: 35vh;
+    border-left: rgba(128, 128, 128, 0.411) 1px solid;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main-sec img {
+    height: 244px;
+    width: 432px;
+    position: absolute;
+    top: 2.5vh;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    border: 1px rgba(0, 0, 0, 0.4) solid;
+}
+
+.main-sec a:link, .main-sec a:visited {
+    text-decoration: none;
+    align-items: flex-end;
+    backdrop-filter: blur(2px);
+    height: 244px;
+    width: 432px;
+    position: absolute;
+    top: 1vh;
+    text-indent: 0.15in;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    display: none;
+    font-size: 0.3in;
+    border-bottom: 4px solid #EE1E46;
+    padding-bottom: 0.1in;
+    text-shadow: 0px 0px 10px black;
+}
+
+.main-sec:hover a:link, .main-sec:hover a:visited {
+    display: flex;
+} 
+
+#horror:hover a:link, #horror:hover a:visited  {
+    animation: smolglitch 4s ease-in-out infinite alternate-reverse;
+    font-family: Charu Chandan BloodDrip Unicode;
+    color: #db2909;
+}
+
+@keyframes smolglitch {
+    0% {
+        transform: translate(0);
+      }
+    1% {
+        transform: translate(-5px, 5px);
+        filter: blur(1px);
+      }
+    2% {
+        transform: translate(5px, -5px);
+      }
+    3% {
+        transform: translate(-5px, 5px);
+        filter: blur(5px);
+      }
+    4% {
+        transform: translate(5px, -5px);
+      }
+    5% {
+        transform: translate(0);
+        filter: blur(0px);
+      }
+    
+    95% {
+        transform: translate(0);
+        filter: blur(0px);
+      }
+    96% {
+        transform: translate(-5px, 5px);
+        filter: blur(1px);
+      }
+    97% {
+        transform: translate(5px, -5px);
+      }
+    98% {
+        transform: translate(-5px, 5px);
+        filter: blur(5px);
+      }
+    99% {
+        transform: translate(5px, -5px);
+      }
+    100% {
+        transform: translate(0);
+        filter: blur(0px);
+      }
+  }
+
+.performance {
+    background-color: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10vh;
+    padding-top: 20vh;
+}
+
+.performance .headline h2 {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.performance .headline p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.pt-container {
+    padding-top: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0.8in;
+    padding-bottom: 15vh;
+}
+
+.pts .img-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pts img {
+    height: auto;
+    width: 80%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    border: 1px rgba(0, 0, 0, 0.4) solid;
+    margin-bottom: 5vh;
+    transition: all 0.3s;
+}
+
+.info-wrapper {
+    text-align: center;
+}
+
+.info-wrapper h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+}
+
+.info-wrapper p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+}
+
+.pts img:hover {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.activities {
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10vh;
+    padding-top: 20vh;
+}
+
+.activities .headline h2 {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.activities .headline p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+}
+
+.act-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2in;
+    column-gap: 0.2in;
+    margin-top: 1.5in;
+}
+
+.act {
+    background-color: #222222;
+    padding-bottom: 5vh;
+    overflow: hidden;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.act img {
+    height: auto;
+    width: 100%;
+    margin-bottom: 3vh;
+    filter: brightness(85%);
+}
+
+.act .info-wrapper h2 {
+    color: white;
+    margin-bottom: 0.05in;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.act .info-wrapper p {
+    color: #858585;
+}
+
+.act .info-wrapper {
+    padding: 0% 5%;
+}
+
+.act:hover {
+    transform: translateY(-30px);
+    box-shadow: 0px 0px 50px #85858527;
+    border: black 3px solid
+}
+
+.horror-act {
+    animation: smolglitch 4s ease-in-out infinite alternate-reverse;
+}
+
+.horror-act .info-wrapper h2 {
+    font-family: Charu Chandan BloodDrip Unicode;
+    color: #db2909;
+}
